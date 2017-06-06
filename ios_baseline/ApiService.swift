@@ -8,11 +8,10 @@
 
 import Foundation
 import SwiftyJSON
-import Alamofire
 import TRON
 
 struct ApiService {
-    let tron = TRON(baseURL: "https://pitonisa.herokuapp.com/api/v1/")
+    let tron = TRON(baseURL: "http://localhost:3000/api/v1")
     static let sharedInstance = ApiService()
     
     class JSONError: JSONDecodable {
@@ -29,7 +28,7 @@ struct ApiService {
     class Token: JSONDecodable {
         let token: String
         required init(json: JSON) throws {
-            self.token = json["auth_token"].stringValue
+            self.token = json["user"]["auth_token"].stringValue
         }
     }
     
@@ -49,6 +48,7 @@ struct ApiService {
                 print(JSON(data: data))
             }
         }
+
     }
 
     
