@@ -9,6 +9,10 @@ target 'ios_baseline' do
   pod 'Alamofire', '~> 4.4'
   pod 'SwiftyJSON'
   pod 'TRON', '~> 2.0.0'
+  pod 'SkyFloatingLabelTextField', '~> 3.0'
+  pod 'SwiftIconFont'
+  pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
+  pod 'SnapKit', '~> 3.0'
   
   target 'ios_baselineTests' do
     inherit! :search_paths
