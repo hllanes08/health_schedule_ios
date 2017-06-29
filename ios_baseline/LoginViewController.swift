@@ -14,39 +14,20 @@ import SnapKit
 
 class LoginViewController: UIViewController {
 
+   
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
+  
+    
     let emailTextField: SkyFloatingLabelTextFieldWithIcon = {
-        let field = SkyFloatingLabelTextFieldWithIcon()
-        field.placeholder = "email"
-        field.iconText = "io:person"
-        field.iconLabel.parseIcon()
-        field.placeholderColor = .flatWhite
-        field.tintColor = .flatWhite
-        field.textColor = .flatWhite
-        field.lineColor = .flatWhite
-        field.iconColor = .flatWhite
-        field.titleLabel.textColor = .flatWhite
-        field.selectedLineColor = .flatWhiteDark
-        field.selectedIconColor = .flatWhiteDark
+        let field = UIComponents.customTextField(placeholder: "email", icon: "io:person", tntColor: .flatWhite, phColor: UIColors.phColor(), bgColor: UIColors.textbgColor())
         return field
     }()
     
     let passwordTextField: SkyFloatingLabelTextFieldWithIcon = {
-        let field = SkyFloatingLabelTextFieldWithIcon()
-        field.placeholder = "contraseña"
-        field.iconText = "io:lock-combination"
+        let field = UIComponents.customTextField(placeholder: "contraseña", icon: "io:lock-combination", tntColor: .flatWhite, phColor: UIColors.phColor(), bgColor: UIColors.textbgColor())
         field.isSecureTextEntry = true
-        field.iconLabel.parseIcon()
-        field.placeholderColor = .flatWhite
-        field.tintColor = .flatWhite
-        field.textColor = .flatWhite
-        field.lineColor = .flatWhite
-        field.iconColor = .flatWhite
-        field.titleLabel.textColor = .flatWhite
-        field.selectedLineColor = .flatWhiteDark
-        field.selectedIconColor = .flatWhiteDark
         return field
     }()
     
@@ -58,25 +39,35 @@ class LoginViewController: UIViewController {
         return imageView
     }()
     
-    
+    let loginButton: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = UIColors.btnColor()
+        button.setTitle("io:log-in Entrar", for: .normal)
+        button.setTitleColor(UIColor.flatWhite, for: .normal)
+        button.layer.cornerRadius = 5
+        //button.addTarget(self, action: #selector(login), for: .touchUpInside)
+        button.parseIcon()
+        return button
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.gray
-        self.view.addSubview(logoImageView)
+        self.view.backgroundColor = UIColors.bgColor()
+        //self.view.addSubview(logoImageView)
         self.view.addSubview(emailTextField)
         self.view.addSubview(passwordTextField)
+        self.view.addSubview(loginButton)
         
-        
-        logoImageView.snp.makeConstraints { (make) in
-            make.top.equalTo(self.view).offset(50)
-            make.centerX.equalTo(self.view)
-            make.height.width.equalTo(100)
-        }
+        //logoImageView.snp.makeConstraints { (make) in
+          //make.top.equalTo(self.view).offset(50)
+          // make.centerX.equalTo(self.view)
+          //  make.height.width.equalTo(100)
+        //}
         
         emailTextField.snp.makeConstraints { (make) in
             make.left.equalTo(self.view).offset(50)
             make.right.equalTo(self.view).offset(-50)
-            make.top.equalTo(logoImageView.snp.bottom).offset(30)
+            make.centerY.equalTo(self.view).offset(-50)
             make.height.equalTo(50)
         }
         passwordTextField.snp.makeConstraints { (make) in
@@ -85,7 +76,16 @@ class LoginViewController: UIViewController {
             make.top.equalTo(emailTextField.snp.bottom)
             make.height.equalTo(50)
         }
-
+        
+        loginButton.snp.makeConstraints { (make) in
+            make.left.equalTo(self.view).offset(50)
+            make.right.equalTo(self.view).offset(-50)
+            make.top.equalTo(passwordTextField.snp.bottom).offset(20)
+            make.height.equalTo(50)
+        }
+        
+        let tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
         // Do any additional setup after loading the view.
     }
 
@@ -93,8 +93,13 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
+    func login() {
+        self.dismiss(animated: true, completion: nil)
+    }
+    func dismissKeyboard() {
+     view.endEditing(true)
+    }
+  
     /*
     // MARK: - Navigation
 

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		163FAD351EE7C7BB00486FDA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163FAD341EE7C7BB00486FDA /* LoginViewController.swift */; };
+		165531061F046E500076CEBD /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165531051F046E500076CEBD /* DashboardViewController.swift */; };
+		16BDDE811EFC69F2006AE0CC /* UIComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BDDE801EFC69F2006AE0CC /* UIComponents.swift */; };
 		16E41B9C1EE652F8001478EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E41B9B1EE652F8001478EB /* AppDelegate.swift */; };
 		16E41B9E1EE652F8001478EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E41B9D1EE652F8001478EB /* ViewController.swift */; };
 		16E41BA11EE652F8001478EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16E41B9F1EE652F8001478EB /* Main.storyboard */; };
@@ -17,6 +19,7 @@
 		16E41BBC1EE652F9001478EB /* ios_baselineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E41BBB1EE652F9001478EB /* ios_baselineUITests.swift */; };
 		16E41BCA1EE65510001478EB /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E41BC91EE65510001478EB /* ApiService.swift */; };
 		16E41BCE1EE6587A001478EB /* Pods_ios_baselineTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16E41BCD1EE6587A001478EB /* Pods_ios_baselineTests.framework */; };
+		16EDF1001EFC785C0052DA67 /* UIColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EDF0FF1EFC785C0052DA67 /* UIColors.swift */; };
 		72386801CA5AB8CF2C7D8627 /* Pods_ios_baselineUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAACBBFF2E31A20F0EBC4DE0 /* Pods_ios_baselineUITests.framework */; };
 		9FA8E28F46BF9946D9EA53FC /* Pods_ios_baselineTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B52766841E2A26A5D881F413 /* Pods_ios_baselineTests.framework */; };
 		A7D776206D09331C6AD4B12C /* Pods_ios_baseline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F0731EF931F8BC9512099BB /* Pods_ios_baseline.framework */; };
@@ -42,6 +45,8 @@
 /* Begin PBXFileReference section */
 		162EFCCA1B3A72FF93ECF8A0 /* Pods-ios_baselineTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_baselineTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios_baselineTests/Pods-ios_baselineTests.release.xcconfig"; sourceTree = "<group>"; };
 		163FAD341EE7C7BB00486FDA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		165531051F046E500076CEBD /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		16BDDE801EFC69F2006AE0CC /* UIComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIComponents.swift; sourceTree = "<group>"; };
 		16E41B981EE652F8001478EB /* ios_baseline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios_baseline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16E41B9B1EE652F8001478EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16E41B9D1EE652F8001478EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +63,7 @@
 		16E41BC91EE65510001478EB /* ApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		16E41BCB1EE65868001478EB /* Pods_ios_baselineTests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_ios_baselineTests.framework; path = "Pods/../build/Debug-iphoneos/Pods_ios_baselineTests.framework"; sourceTree = "<group>"; };
 		16E41BCD1EE6587A001478EB /* Pods_ios_baselineTests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_ios_baselineTests.framework; path = "Pods/../build/Debug-iphoneos/Pods_ios_baselineTests.framework"; sourceTree = "<group>"; };
+		16EDF0FF1EFC785C0052DA67 /* UIColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColors.swift; sourceTree = "<group>"; };
 		402DA56422FB9BBC54653B8E /* Pods-ios_baselineUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_baselineUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios_baselineUITests/Pods-ios_baselineUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6F0731EF931F8BC9512099BB /* Pods_ios_baseline.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_baseline.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		882DFE79F092A6FFC23B492B /* Pods-ios_baseline.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_baseline.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios_baseline/Pods-ios_baseline.release.xcconfig"; sourceTree = "<group>"; };
@@ -130,6 +136,9 @@
 				16E41BA71EE652F8001478EB /* Info.plist */,
 				16E41BC91EE65510001478EB /* ApiService.swift */,
 				163FAD341EE7C7BB00486FDA /* LoginViewController.swift */,
+				16BDDE801EFC69F2006AE0CC /* UIComponents.swift */,
+				16EDF0FF1EFC785C0052DA67 /* UIColors.swift */,
+				165531051F046E500076CEBD /* DashboardViewController.swift */,
 			);
 			path = ios_baseline;
 			sourceTree = "<group>";
@@ -462,9 +471,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				163FAD351EE7C7BB00486FDA /* LoginViewController.swift in Sources */,
+				165531061F046E500076CEBD /* DashboardViewController.swift in Sources */,
 				16E41B9E1EE652F8001478EB /* ViewController.swift in Sources */,
 				16E41B9C1EE652F8001478EB /* AppDelegate.swift in Sources */,
+				16BDDE811EFC69F2006AE0CC /* UIComponents.swift in Sources */,
 				16E41BCA1EE65510001478EB /* ApiService.swift in Sources */,
+				16EDF1001EFC785C0052DA67 /* UIColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
