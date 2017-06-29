@@ -9,46 +9,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ios_baseline/ApiService.swift"
-            timestampString = "518419000.683466"
+            filePath = "ios_baseline/LoginViewController.swift"
+            timestampString = "520445449.466583"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "signIn(email:password:)"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "login()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ios_baseline.ApiService.signIn (email : Swift.String, password : Swift.String) -&gt; ()"
-                  moduleName = "ios_baseline"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/hllanes/app/ios_baseline/ios_baseline/ApiService.swift"
-                  timestampString = "520443646.760288"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "45"
-                  endingLineNumber = "45"
-                  offsetFromSymbolStart = "770">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ios_baseline.ApiService.(signIn (email : Swift.String, password : Swift.String) -&gt; ()).(closure #1)"
-                  moduleName = "ios_baseline"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/hllanes/app/ios_baseline/ios_baseline/ApiService.swift"
-                  timestampString = "520443646.762247"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "46"
-                  endingLineNumber = "46"
-                  offsetFromSymbolStart = "12">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

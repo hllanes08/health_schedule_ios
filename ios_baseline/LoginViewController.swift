@@ -45,7 +45,7 @@ class LoginViewController: UIViewController {
         button.setTitle("io:log-in Entrar", for: .normal)
         button.setTitleColor(UIColor.flatWhite, for: .normal)
         button.layer.cornerRadius = 5
-        //button.addTarget(self, action: #selector(login), for: .touchUpInside)
+        button.addTarget(self, action: #selector(login), for: .touchUpInside)
         button.parseIcon()
         return button
     }()
@@ -94,6 +94,9 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     func login() {
+        let email:String! = emailTextField.text
+        let password:String! = passwordTextField.text
+        ApiService.sharedInstance.signIn(email: email, password: password)
         self.dismiss(animated: true, completion: nil)
     }
     func dismissKeyboard() {
