@@ -13,6 +13,10 @@ target 'ios_baseline' do
   pod 'SwiftIconFont'
   pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
   pod 'SnapKit', '~> 3.0'
+  pod 'SwiftyJSON'
+  pod 'LBTAComponents'
+  pod 'SwiftKeychainWrapper'
+  pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
   
   target 'ios_baselineTests' do
     inherit! :search_paths

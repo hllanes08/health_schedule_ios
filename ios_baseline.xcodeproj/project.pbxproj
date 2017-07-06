@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		163FAD351EE7C7BB00486FDA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163FAD341EE7C7BB00486FDA /* LoginViewController.swift */; };
 		165531061F046E500076CEBD /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165531051F046E500076CEBD /* DashboardViewController.swift */; };
+		16B91CB21F0B41E700D72043 /* CalendarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B91CB11F0B41E700D72043 /* CalendarItem.swift */; };
+		16B91CB41F0B472500D72043 /* CalendarItemDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B91CB31F0B472500D72043 /* CalendarItemDataSource.swift */; };
 		16BDDE811EFC69F2006AE0CC /* UIComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BDDE801EFC69F2006AE0CC /* UIComponents.swift */; };
 		16E41B9C1EE652F8001478EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E41B9B1EE652F8001478EB /* AppDelegate.swift */; };
 		16E41B9E1EE652F8001478EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E41B9D1EE652F8001478EB /* ViewController.swift */; };
@@ -46,6 +48,8 @@
 		162EFCCA1B3A72FF93ECF8A0 /* Pods-ios_baselineTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_baselineTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios_baselineTests/Pods-ios_baselineTests.release.xcconfig"; sourceTree = "<group>"; };
 		163FAD341EE7C7BB00486FDA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		165531051F046E500076CEBD /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		16B91CB11F0B41E700D72043 /* CalendarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarItem.swift; sourceTree = "<group>"; };
+		16B91CB31F0B472500D72043 /* CalendarItemDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarItemDataSource.swift; sourceTree = "<group>"; };
 		16BDDE801EFC69F2006AE0CC /* UIComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIComponents.swift; sourceTree = "<group>"; };
 		16E41B981EE652F8001478EB /* ios_baseline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios_baseline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16E41B9B1EE652F8001478EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +107,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		16B91CB01F0B41CF00D72043 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				16B91CB11F0B41E700D72043 /* CalendarItem.swift */,
+				16B91CB31F0B472500D72043 /* CalendarItemDataSource.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		16E41B8F1EE652F8001478EB = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +141,7 @@
 		16E41B9A1EE652F8001478EB /* ios_baseline */ = {
 			isa = PBXGroup;
 			children = (
+				16B91CB01F0B41CF00D72043 /* Models */,
 				16E41B9B1EE652F8001478EB /* AppDelegate.swift */,
 				16E41B9D1EE652F8001478EB /* ViewController.swift */,
 				16E41B9F1EE652F8001478EB /* Main.storyboard */,
@@ -476,6 +490,8 @@
 				16E41B9C1EE652F8001478EB /* AppDelegate.swift in Sources */,
 				16BDDE811EFC69F2006AE0CC /* UIComponents.swift in Sources */,
 				16E41BCA1EE65510001478EB /* ApiService.swift in Sources */,
+				16B91CB41F0B472500D72043 /* CalendarItemDataSource.swift in Sources */,
+				16B91CB21F0B41E700D72043 /* CalendarItem.swift in Sources */,
 				16EDF1001EFC785C0052DA67 /* UIColors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,9 +9,10 @@
 import Foundation
 import SwiftyJSON
 import TRON
+import SwiftKeychainWrapper
 
 struct ApiService {
-    let tron = TRON(baseURL: "http://localhost:3000/api/v1")
+    let tron = TRON(baseURL: "http://ec2-52-89-198-196.us-west-2.compute.amazonaws.com/api/v1")
     static let sharedInstance = ApiService()
     
     class JSONError: JSONDecodable {
@@ -29,6 +30,7 @@ struct ApiService {
         let token: String
         required init(json: JSON) throws {
             self.token = json["user"]["auth_token"].stringValue
+            KeychainWrapper.standard.set(self.token, forKey: "token")
         }
     }
     
@@ -39,6 +41,7 @@ struct ApiService {
                 "password": password
             ]
         ]
+        KeychainWrapper.standard.removeObject(forKey: "token")
         let request: APIRequest<Token, JSONError> = tron.request("/sessions")
         request.method = .post
         request.parameters = parameters
@@ -47,6 +50,20 @@ struct ApiService {
             if let data = error.data {
                 print(JSON(data: data))
             }
+        }
+
+    }
+    
+    func fetchCalendarItems(completion: @escaping (CalendarItemDataSource) -> ()){
+        let token  = KeychainWrapper.standard.string(forKey: "token")
+        if(token != nil){
+          self.tron.headerBuilder = HeaderBuilder(defaultHeaders: ["Authorization": token!])
+        }
+        let request: APIRequest<CalendarItemDataSource, JSONError> = tron.request("/calendar")
+        request.perform(withSuccess: { (calendarItemsDataSource) in
+            completion(calendarItemsDataSource)
+        }) { (err) in
+            print("failed to fetch json...", err)
         }
 
     }

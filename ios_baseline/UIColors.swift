@@ -25,4 +25,16 @@ class UIColors{
     static func btnColor() -> UIColor{
          return UIColor(red: (76/255), green: (160/255), blue: (255/255), alpha: 100)
     }
+    static func bgAppColor() -> UIColor{
+        return UIColor(red: (31/255), green: (37/255), blue: (51/255), alpha: 88)
+    }
+    static func lbColor() -> UIColor{
+        return UIColor(red: (240/255), green: (242/255), blue: (245/255), alpha: 100)
+    }
+    static func bgCenterColor() -> UIColor{
+        return UIColor(red: (151/255), green: (151/255), blue: (151/255), alpha: 100)
+    }
+    static func shadows() -> UIColor{
+        return  UIColor(red: (31/255), green: (37/255), blue: (51/255), alpha: 50)
+    }
 }
