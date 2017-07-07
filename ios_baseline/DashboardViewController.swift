@@ -107,6 +107,18 @@ class DashboardViewController: UIViewController {
         uv.backgroundColor = .clear
         return uv
     }()
+    let animationView:UIView = {
+        let uv = UIView()
+        uv.layer.masksToBounds = true
+        uv.backgroundColor = .clear
+        return uv
+    }()
+    let footerContent:UIView = {
+        let uv = UIView()
+        uv.layer.masksToBounds = true
+        uv.backgroundColor = .clear
+        return uv
+    }()
     
     let syncButton:UIButton = {
         let button = UIButton()
@@ -118,8 +130,8 @@ class DashboardViewController: UIViewController {
         button.parseIcon()
         return button
     }()
+    
     let eventStore = EKEventStore()
-   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -205,7 +217,19 @@ class DashboardViewController: UIViewController {
             make.left.right.equalToSuperview()
             make.height.equalToSuperview().dividedBy(3)
         }
-        centerContent.addSubview(syncButton)
+        centerContent.addSubview(animationView)
+        animationView.snp.makeConstraints{ (make) in
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview()
+            make.width.equalToSuperview().dividedBy(3)
+            make.height.equalToSuperview()
+        }
+        self.view.addSubview(footerContent)
+        footerContent.snp.makeConstraints{ (make) in
+            make.height.equalToSuperview().dividedBy(3)
+            make.left.right.bottom.equalToSuperview()
+        }
+        footerContent.addSubview(syncButton)
         syncButton.snp.makeConstraints{ (make) in
             make.top.equalToSuperview().offset(50)
             make.centerX.equalToSuperview()
@@ -239,7 +263,7 @@ class DashboardViewController: UIViewController {
                     event.notes = "Nota Agregada"
                     event.calendar = events_calendar
                     do {
-                        try self.eventStore.save(event, span: .thisEvent, commit: true)
+                      //  try self.eventStore.save(event, span: .thisEvent, commit: true)
                     }catch let error as NSError {
                         print("failed to save event with error : \(error)")
                     }

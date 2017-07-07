@@ -37,4 +37,7 @@ class UIColors{
     static func shadows() -> UIColor{
         return  UIColor(red: (31/255), green: (37/255), blue: (51/255), alpha: 50)
     }
+    static func greenStrong() -> UIColor{
+         return  UIColor(red: (0/255), green: (255/255), blue: (121/255), alpha: 100)
+    }
 }

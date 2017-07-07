@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "16E41B971EE652F8001478EB"
-               BuildableName = "ios_baseline.app"
+               BuildableName = "Insomnia.app"
                BlueprintName = "ios_baseline"
                ReferencedContainer = "container:ios_baseline.xcodeproj">
             </BuildableReference>
@@ -53,7 +53,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "16E41B971EE652F8001478EB"
-            BuildableName = "ios_baseline.app"
+            BuildableName = "Insomnia.app"
             BlueprintName = "ios_baseline"
             ReferencedContainer = "container:ios_baseline.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "16E41B971EE652F8001478EB"
-            BuildableName = "ios_baseline.app"
+            BuildableName = "Insomnia.app"
             BlueprintName = "ios_baseline"
             ReferencedContainer = "container:ios_baseline.xcodeproj">
          </BuildableReference>
@@ -95,7 +95,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "16E41B971EE652F8001478EB"
-            BuildableName = "ios_baseline.app"
+            BuildableName = "Insomnia.app"
             BlueprintName = "ios_baseline"
             ReferencedContainer = "container:ios_baseline.xcodeproj">
          </BuildableReference>

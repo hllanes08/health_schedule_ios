@@ -51,7 +51,7 @@
 		16B91CB11F0B41E700D72043 /* CalendarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarItem.swift; sourceTree = "<group>"; };
 		16B91CB31F0B472500D72043 /* CalendarItemDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarItemDataSource.swift; sourceTree = "<group>"; };
 		16BDDE801EFC69F2006AE0CC /* UIComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIComponents.swift; sourceTree = "<group>"; };
-		16E41B981EE652F8001478EB /* ios_baseline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios_baseline.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		16E41B981EE652F8001478EB /* Insomnia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Insomnia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16E41B9B1EE652F8001478EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16E41B9D1EE652F8001478EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		16E41BA01EE652F8001478EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -131,7 +131,7 @@
 		16E41B991EE652F8001478EB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				16E41B981EE652F8001478EB /* ios_baseline.app */,
+				16E41B981EE652F8001478EB /* Insomnia.app */,
 				16E41BAC1EE652F9001478EB /* ios_baselineTests.xctest */,
 				16E41BB71EE652F9001478EB /* ios_baselineUITests.xctest */,
 			);
@@ -220,7 +220,7 @@
 			);
 			name = ios_baseline;
 			productName = ios_baseline;
-			productReference = 16E41B981EE652F8001478EB /* ios_baseline.app */;
+			productReference = 16E41B981EE652F8001478EB /* Insomnia.app */;
 			productType = "com.apple.product-type.application";
 		};
 		16E41BAB1EE652F9001478EB /* ios_baselineTests */ = {
@@ -653,7 +653,7 @@
 				INFOPLIST_FILE = ios_baseline/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "personal.ios-baseline";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Insomnia;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -671,7 +671,7 @@
 				INFOPLIST_FILE = ios_baseline/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "personal.ios-baseline";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Insomnia;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
