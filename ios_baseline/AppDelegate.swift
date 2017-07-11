@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import  ChameleonFramework
+import ChameleonFramework
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,14 +17,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        /*let myGroup = DispatchGroup()
+        let myGroup = DispatchGroup()
         myGroup.enter()
         DispatchQueue.main.async {
           ApiService.sharedInstance.signIn(email: "harvin.llanes@gmail.com", password: "dbz20xl2016")
           myGroup.leave()
-        }*/
+        }
         self.window?.backgroundColor = UIColor(gradientStyle:UIGradientStyle.radial, withFrame: self.window!.frame, andColors:[ UIColors.bgCenterColor(), UIColors.bgColor(), UIColors.shadows()])
-        self.window?.rootViewController = DashboardViewController()//LoginViewController()
+        UITabBar.appearance().tintColor = UIColor.clear
+        self.window?.rootViewController = MenuTabViewController()//LoginViewController()
         return true
     }
 

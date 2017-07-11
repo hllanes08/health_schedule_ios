@@ -17,6 +17,8 @@ target 'ios_baseline' do
   pod 'LBTAComponents'
   pod 'SwiftKeychainWrapper'
   pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
+  pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift3'
+  pod 'RAMAnimatedTabBarController', "~> 2.0.13" 
   
   target 'ios_baselineTests' do
     inherit! :search_paths

@@ -40,4 +40,10 @@ class UIColors{
     static func greenStrong() -> UIColor{
          return  UIColor(red: (0/255), green: (255/255), blue: (121/255), alpha: 100)
     }
+    static func orangeIntense() -> UIColor{
+        return  UIColor(red: (255/255), green: (187/255), blue: (0/255), alpha: 100)
+    }
+    static func redIntense() -> UIColor{
+        return  UIColor(red: (255/255), green: (24/255), blue: (87/255), alpha: 100)
+    }
 }

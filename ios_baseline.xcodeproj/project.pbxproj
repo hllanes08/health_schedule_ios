@@ -8,10 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		163FAD351EE7C7BB00486FDA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163FAD341EE7C7BB00486FDA /* LoginViewController.swift */; };
-		165531061F046E500076CEBD /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165531051F046E500076CEBD /* DashboardViewController.swift */; };
+		165531061F046E500076CEBD /* CalendarItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165531051F046E500076CEBD /* CalendarItemsViewController.swift */; };
 		16B91CB21F0B41E700D72043 /* CalendarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B91CB11F0B41E700D72043 /* CalendarItem.swift */; };
 		16B91CB41F0B472500D72043 /* CalendarItemDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B91CB31F0B472500D72043 /* CalendarItemDataSource.swift */; };
 		16BDDE811EFC69F2006AE0CC /* UIComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BDDE801EFC69F2006AE0CC /* UIComponents.swift */; };
+		16CA2B501F143A7F0085E220 /* MenuTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CA2B4F1F143A7F0085E220 /* MenuTabViewController.swift */; };
+		16CA2B521F143CC20085E220 /* NavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CA2B511F143CC20085E220 /* NavViewController.swift */; };
+		16CA2B541F143D920085E220 /* LogoBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CA2B531F143D920085E220 /* LogoBarButtonItem.swift */; };
+		16CA2B561F143FE90085E220 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CA2B551F143FE90085E220 /* CalendarViewController.swift */; };
 		16E41B9C1EE652F8001478EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E41B9B1EE652F8001478EB /* AppDelegate.swift */; };
 		16E41B9E1EE652F8001478EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E41B9D1EE652F8001478EB /* ViewController.swift */; };
 		16E41BA11EE652F8001478EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16E41B9F1EE652F8001478EB /* Main.storyboard */; };
@@ -47,10 +51,14 @@
 /* Begin PBXFileReference section */
 		162EFCCA1B3A72FF93ECF8A0 /* Pods-ios_baselineTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_baselineTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios_baselineTests/Pods-ios_baselineTests.release.xcconfig"; sourceTree = "<group>"; };
 		163FAD341EE7C7BB00486FDA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		165531051F046E500076CEBD /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		165531051F046E500076CEBD /* CalendarItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarItemsViewController.swift; sourceTree = "<group>"; };
 		16B91CB11F0B41E700D72043 /* CalendarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarItem.swift; sourceTree = "<group>"; };
 		16B91CB31F0B472500D72043 /* CalendarItemDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarItemDataSource.swift; sourceTree = "<group>"; };
 		16BDDE801EFC69F2006AE0CC /* UIComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIComponents.swift; sourceTree = "<group>"; };
+		16CA2B4F1F143A7F0085E220 /* MenuTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTabViewController.swift; sourceTree = "<group>"; };
+		16CA2B511F143CC20085E220 /* NavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavViewController.swift; sourceTree = "<group>"; };
+		16CA2B531F143D920085E220 /* LogoBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoBarButtonItem.swift; sourceTree = "<group>"; };
+		16CA2B551F143FE90085E220 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		16E41B981EE652F8001478EB /* Insomnia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Insomnia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16E41B9B1EE652F8001478EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16E41B9D1EE652F8001478EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -152,7 +160,11 @@
 				163FAD341EE7C7BB00486FDA /* LoginViewController.swift */,
 				16BDDE801EFC69F2006AE0CC /* UIComponents.swift */,
 				16EDF0FF1EFC785C0052DA67 /* UIColors.swift */,
-				165531051F046E500076CEBD /* DashboardViewController.swift */,
+				165531051F046E500076CEBD /* CalendarItemsViewController.swift */,
+				16CA2B4F1F143A7F0085E220 /* MenuTabViewController.swift */,
+				16CA2B511F143CC20085E220 /* NavViewController.swift */,
+				16CA2B531F143D920085E220 /* LogoBarButtonItem.swift */,
+				16CA2B551F143FE90085E220 /* CalendarViewController.swift */,
 			);
 			path = ios_baseline;
 			sourceTree = "<group>";
@@ -484,11 +496,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16CA2B541F143D920085E220 /* LogoBarButtonItem.swift in Sources */,
 				163FAD351EE7C7BB00486FDA /* LoginViewController.swift in Sources */,
-				165531061F046E500076CEBD /* DashboardViewController.swift in Sources */,
+				165531061F046E500076CEBD /* CalendarItemsViewController.swift in Sources */,
+				16CA2B521F143CC20085E220 /* NavViewController.swift in Sources */,
 				16E41B9E1EE652F8001478EB /* ViewController.swift in Sources */,
+				16CA2B501F143A7F0085E220 /* MenuTabViewController.swift in Sources */,
 				16E41B9C1EE652F8001478EB /* AppDelegate.swift in Sources */,
 				16BDDE811EFC69F2006AE0CC /* UIComponents.swift in Sources */,
+				16CA2B561F143FE90085E220 /* CalendarViewController.swift in Sources */,
 				16E41BCA1EE65510001478EB /* ApiService.swift in Sources */,
 				16B91CB41F0B472500D72043 /* CalendarItemDataSource.swift in Sources */,
 				16B91CB21F0B41E700D72043 /* CalendarItem.swift in Sources */,

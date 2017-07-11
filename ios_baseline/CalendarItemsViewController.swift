@@ -10,8 +10,11 @@ import UIKit
 import SwiftIconFont
 import LBTAComponents
 import EventKit
+import Spring
+import ChameleonFramework
 
-class DashboardViewController: UIViewController {
+
+class CalendarItemsViewController: UIViewController {
     var datasource:Datasource = {
         return Datasource()
     }()
@@ -107,11 +110,16 @@ class DashboardViewController: UIViewController {
         uv.backgroundColor = .clear
         return uv
     }()
-    let animationView:UIView = {
-        let uv = UIView()
-        uv.layer.masksToBounds = true
-        uv.backgroundColor = .clear
-        return uv
+    let animationView:SpringImageView = {
+        let siv = SpringImageView()
+        let circlePath = UIBezierPath(arcCenter: CGPoint(x: 150,y: 150), radius: CGFloat(50), startAngle: CGFloat(0), endAngle:CGFloat(M_PI * 2), clockwise: true)
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.path = circlePath.cgPath
+        shapeLayer.fillColor =  UIColors.orangeIntense().cgColor//UIColor(gradientStyle:UIGradientStyle.radial, withFrame: shapeLayer.frame, andColors:[ UIColors.redIntense(), UIColors.orangeIntense(), UIColors.shadows()]).cgColor
+        siv.layer.addSublayer(shapeLayer)
+        siv.layer.masksToBounds = true
+        siv.backgroundColor = .clear
+        return siv
     }()
     let footerContent:UIView = {
         let uv = UIView()
@@ -132,9 +140,10 @@ class DashboardViewController: UIViewController {
     }()
     
     let eventStore = EKEventStore()
-    
+    var asyncCalendar = false
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.animationView.alpha = 0
         
         self.view.addSubview(topNumber)
         topNumber.snp.makeConstraints{ (make) in
@@ -221,9 +230,11 @@ class DashboardViewController: UIViewController {
         animationView.snp.makeConstraints{ (make) in
             make.centerX.equalToSuperview()
             make.centerY.equalToSuperview()
-            make.width.equalToSuperview().dividedBy(3)
-            make.height.equalToSuperview()
+            make.width.equalTo(300)
+            make.height.equalTo(300)
         }
+    
+        
         self.view.addSubview(footerContent)
         footerContent.snp.makeConstraints{ (make) in
             make.height.equalToSuperview().dividedBy(3)
@@ -251,6 +262,9 @@ class DashboardViewController: UIViewController {
     }
     
     func addEventsToCalendar(){
+        DispatchQueue.main.async {
+          self.addAnimation()
+        }
         eventStore.requestAccess(to: EKEntityType.event, completion: { (granted, error) in
              if (granted) && (error == nil) {
                 let events_calendar = self.addCalendar()
@@ -263,12 +277,12 @@ class DashboardViewController: UIViewController {
                     event.notes = "Nota Agregada"
                     event.calendar = events_calendar
                     do {
-                      //  try self.eventStore.save(event, span: .thisEvent, commit: true)
+                      try self.eventStore.save(event, span: .thisEvent, commit: true)
                     }catch let error as NSError {
                         print("failed to save event with error : \(error)")
                     }
                 }
-                
+                self.asyncCalendar = true
             }
             else{
                 print("Error de Acceso")
@@ -289,6 +303,20 @@ class DashboardViewController: UIViewController {
         }
         catch { }
         return turnosCalendar
+    }
+    func addAnimation(){
+       animationView.alpha = 1
+       animationView.animation = "flipX"
+       animationView.animateToNext {
+            self.animationView.animation = "flipY"
+            self.animationView.animateTo()
+            self.animationView.animateToNext {
+                self.animationView.animation = "fall"
+                self.animationView.animateTo()
+            }
+        }
+       animationView.animate()
+
     }
     /*
     // MARK: - Navigation
