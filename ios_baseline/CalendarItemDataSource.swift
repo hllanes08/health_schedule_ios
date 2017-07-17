@@ -33,5 +33,11 @@ class CalendarItemDataSource: Datasource, JSONDecodable {
             $0.is_weekend == true
         }.count
     }
+    func numberOfHolidays() -> Int{
+        return calendar_items.filter{
+            $0.is_holiday == true
+            }.count
+    }
+    
 
 }

@@ -13,10 +13,11 @@ import ChameleonFramework
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var calendarEvents: CalendarEvents!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
         let myGroup = DispatchGroup()
         myGroup.enter()
         DispatchQueue.main.async {
@@ -24,8 +25,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
           myGroup.leave()
         }
         self.window?.backgroundColor = UIColor(gradientStyle:UIGradientStyle.radial, withFrame: self.window!.frame, andColors:[ UIColors.bgCenterColor(), UIColors.bgColor(), UIColors.shadows()])
-        UITabBar.appearance().tintColor = UIColor.clear
+        UINavigationBar.appearance().backgroundColor = UIColor(gradientStyle:UIGradientStyle.radial, withFrame: self.window!.frame, andColors:[ UIColors.bgCenterColor(), UIColors.bgColor(), UIColors.shadows()])
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+
+        UITabBar.appearance().tintColor = UIColor.white
+        UIButton.appearance().tintColor = .white
+        UITabBar.appearance().tintColor = .white
+        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.white], for: .normal)
+        
         self.window?.rootViewController = MenuTabViewController()//LoginViewController()
+        if calendarEvents == nil  {
+          let appDelegate = UIApplication.shared.delegate as! AppDelegate
+          appDelegate.calendarEvents = CalendarEvents()
+        }
+        
+        
         return true
     }
 

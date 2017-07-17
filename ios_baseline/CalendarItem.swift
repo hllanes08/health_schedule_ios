@@ -14,13 +14,14 @@ struct CalendarItem {
     let start_event_date: Date
     let end_event_date: Date
     let is_weekend: Bool
-
+    let is_holiday: Bool
  
     init(json: JSON)  {
         id = json["id"].intValue
         start_event_date = CalendarItem.convertToLocal(dateString: json["start_event_date"].stringValue)
         end_event_date = CalendarItem.convertToLocal(dateString: json["end_event_date"].stringValue)
         is_weekend = json["is_weekend"].boolValue
+        is_holiday = json["is_holiday"].boolValue
     }
     
     static func convertToLocal(dateString: String) -> Date {

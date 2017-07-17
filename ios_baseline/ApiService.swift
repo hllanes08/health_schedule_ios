@@ -1,4 +1,4 @@
-//
+    //
 //  ApiService.swift
 //  ios_baseline
 //
@@ -13,6 +13,8 @@ import SwiftKeychainWrapper
 
 struct ApiService {
     let tron = TRON(baseURL: "http://ec2-52-89-198-196.us-west-2.compute.amazonaws.com/api/v1")
+    //let tron = TRON(baseURL: "http://localhost:3000/api/v1")
+    
     static let sharedInstance = ApiService()
     
     class JSONError: JSONDecodable {
@@ -54,12 +56,12 @@ struct ApiService {
 
     }
     
-    func fetchCalendarItems(completion: @escaping (CalendarItemDataSource) -> ()){
+    func fetchCalendarItems(calendarId: Int, completion: @escaping (CalendarItemDataSource) -> ()){
         let token  = KeychainWrapper.standard.string(forKey: "token")
         if(token != nil){
           self.tron.headerBuilder = HeaderBuilder(defaultHeaders: ["Authorization": token!])
         }
-        let request: APIRequest<CalendarItemDataSource, JSONError> = tron.request("/calendar")
+        let request: APIRequest<CalendarItemDataSource, JSONError> = tron.request("/calendar/\(calendarId)")
         request.perform(withSuccess: { (calendarItemsDataSource) in
             completion(calendarItemsDataSource)
         }) { (err) in
@@ -67,6 +69,19 @@ struct ApiService {
         }
 
     }
-
+    
+    func fetchCalendars(completion: @escaping (CalendarsDataSource) -> ()){
+        let token  = KeychainWrapper.standard.string(forKey: "token")
+        if(token != nil){
+            self.tron.headerBuilder = HeaderBuilder(defaultHeaders: ["Authorization": token!])
+        }
+        let request: APIRequest<CalendarsDataSource, JSONError> = tron.request("/calendar")
+        request.perform(withSuccess: { (calendarsDataSource) in
+            completion(calendarsDataSource)
+        }) { (err) in
+            print("failed to fetch json...", err)
+        }
+    }
+    
     
 }

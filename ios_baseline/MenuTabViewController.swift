@@ -32,13 +32,14 @@ class MenuTabViewController: RAMAnimatedTabBarController {
         calendarItems.animation = tabAnimation
         
         
-        let calendarItemsViewController = CalendarItemsViewController()
-        let calendarItemsNavViewController = NavViewController(rootViewController: calendarItemsViewController)
-        calendarItemsViewController.title = "Cursos"
-        calendarItemsViewController.tabBarItem = tabBarItems
+        let calendarsViewController = CalendarsViewController()
+        let calendarItemsNavViewController = NavViewController(rootViewController: calendarsViewController)
+        calendarsViewController.title = "Turnos"
+        calendarsViewController.tabBarItem = tabBarItems
         //calendarItemsViewController.navigationItem.leftBarButtonItem = LogoBarButtonItem()
-        calendarItemsViewController.navigationController?.navigationBar.isTranslucent = false
+        calendarsViewController.navigationController?.navigationBar.isTranslucent = false
         calendarItemsNavViewController.setStatusBarStyle(.lightContent)
+     
         
         let calendarViewController = CalendarViewController()
         let calendarNavViewController = NavViewController(rootViewController: calendarViewController)
@@ -50,7 +51,7 @@ class MenuTabViewController: RAMAnimatedTabBarController {
         
         
         tabBar.barTintColor = UIColor(gradientStyle:UIGradientStyle.radial, withFrame: self.tabBar.frame, andColors:[ UIColors.bgCenterColor(), UIColors.bgColor(), UIColors.shadows()])
-        viewControllers = [ calendarItemsViewController, calendarViewController]
+        viewControllers = [ calendarItemsNavViewController, calendarNavViewController]
 
         // Do any additional setup after loading the view.
     }

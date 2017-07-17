@@ -12,9 +12,9 @@ import LBTAComponents
 import EventKit
 import Spring
 import ChameleonFramework
+import Segmentio
 
-
-class CalendarItemsViewController: UIViewController {
+class CalendarsDetailViewController: UIViewController  {
     var datasource:Datasource = {
         return Datasource()
     }()
@@ -89,7 +89,7 @@ class CalendarItemsViewController: UIViewController {
         label.textColor = UIColors.lbColor()
         label.textAlignment = .center
         label.font =  UIFont(name: label.font.fontName, size: 44)
-        label.text = "13"
+        label.text = "0"
         return label
     }()
     
@@ -141,6 +141,9 @@ class CalendarItemsViewController: UIViewController {
     
     let eventStore = EKEventStore()
     var asyncCalendar = false
+    var animationStatus = false
+    var calendarId:Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.animationView.alpha = 0
@@ -247,12 +250,17 @@ class CalendarItemsViewController: UIViewController {
             make.height.equalToSuperview().dividedBy(4)
             make.width.equalToSuperview().dividedBy(2)
         }
-        ApiService.sharedInstance.fetchCalendarItems{ (calendarItemsDataSource) in
+        ApiService.sharedInstance.fetchCalendarItems(calendarId: self.calendarId){ (calendarItemsDataSource) in
             self.datasource = calendarItemsDataSource
             self.weekendLabels.text = String(calendarItemsDataSource.numberOfWeekends())
             self.totalLabel.text = String(calendarItemsDataSource.numberOfItems(0))
+            self.holidayLabel.text = String(calendarItemsDataSource.numberOfHolidays())
+            var appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.calendarEvents.events = calendarItemsDataSource.calendar_items
+            self.animationStatus = true
         }
-        // Do any additional setup after loading the view.
+        addAnimation()
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -262,9 +270,7 @@ class CalendarItemsViewController: UIViewController {
     }
     
     func addEventsToCalendar(){
-        DispatchQueue.main.async {
-          self.addAnimation()
-        }
+        self.addAnimation()
         eventStore.requestAccess(to: EKEntityType.event, completion: { (granted, error) in
              if (granted) && (error == nil) {
                 let events_calendar = self.addCalendar()
@@ -305,19 +311,23 @@ class CalendarItemsViewController: UIViewController {
         return turnosCalendar
     }
     func addAnimation(){
-       animationView.alpha = 1
-       animationView.animation = "flipX"
-       animationView.animateToNext {
-            self.animationView.animation = "flipY"
-            self.animationView.animateTo()
-            self.animationView.animateToNext {
-                self.animationView.animation = "fall"
-                self.animationView.animateTo()
-            }
+      DispatchQueue.global(qos: .background).async {
+        DispatchQueue.main.async {
+                self.animationView.alpha = 1
+                self.animationView.animation = "flipY"
+                self.animationView.repeatCount = Float(100)
+                self.animationView.animate()
+                self.animationView.animateNext {
+                    self.animationView.animation = "flipX"
+                    self.animationView.repeatCount = Float(100)
+                    self.animationView.animate()
+                    self.animationView.alpha = 0
+                }
         }
-       animationView.animate()
-
+      }
+    
     }
+    
     /*
     // MARK: - Navigation
 

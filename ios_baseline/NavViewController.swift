@@ -15,7 +15,7 @@ class NavViewController: UINavigationController {
         super.viewDidLoad()
         navigationBar.barTintColor = UIColors.bgAppColor()
         hidesNavigationBarHairline = false
-        navigationBar.tintColor = UIColor.flatWhite
+        navigationBar.tintColor = UIColor.white
         navigationBar.isTranslucent = false
     }
     

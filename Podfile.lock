@@ -3,8 +3,10 @@ PODS:
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
+  - FSCalendar (2.7.4)
   - LBTAComponents (0.1.9)
   - RAMAnimatedTabBarController (2.0.13)
+  - Segmentio (2.1.2)
   - SkyFloatingLabelTextField (3.0.0)
   - SnapKit (3.2.0)
   - Spring (1.0.3)
@@ -24,8 +26,10 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 4.4)
   - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
+  - FSCalendar
   - LBTAComponents
   - RAMAnimatedTabBarController (~> 2.0.13)
+  - Segmentio (~> 2.1)
   - SkyFloatingLabelTextField (~> 3.0)
   - SnapKit (~> 3.0)
   - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift3`)
@@ -52,8 +56,10 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  FSCalendar: e95995a746acae531c4a7dd636b8393233125ec5
   LBTAComponents: 9a5d314080d1f80208062ccc81a2d25225c5f572
   RAMAnimatedTabBarController: 2510f3b66954c3f77ea1042a35d34df8f5f3b604
+  Segmentio: f85114993e305bd9c522952eef8c2c4db732fd17
   SkyFloatingLabelTextField: 35bc0c2653ad73c5fd8b7a34cfedf09c94367a1a
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
@@ -62,6 +68,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   TRON: 7b9adeb678fe0e25433d207f6a734aaf145fa9b5
 
-PODFILE CHECKSUM: 4f18350f9b225540cd25a4b1e22e182a238730df
+PODFILE CHECKSUM: 17607de7e7efa1a5c0e38a7dc139ab397bcefd10
 
 COCOAPODS: 1.2.1.beta.1
