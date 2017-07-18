@@ -16,6 +16,8 @@
 		1690224D1F16D56D00B228BE /* CalendarEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690224C1F16D56D00B228BE /* CalendarEvents.swift */; };
 		16B91CB21F0B41E700D72043 /* CalendarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B91CB11F0B41E700D72043 /* CalendarItem.swift */; };
 		16B91CB41F0B472500D72043 /* CalendarItemDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B91CB31F0B472500D72043 /* CalendarItemDataSource.swift */; };
+		16BCA1C41F1DB8A5003B59AC /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BCA1C31F1DB8A5003B59AC /* LoginResponse.swift */; };
+		16BCA1C61F1DB8E3003B59AC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BCA1C51F1DB8E3003B59AC /* User.swift */; };
 		16BDDE811EFC69F2006AE0CC /* UIComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BDDE801EFC69F2006AE0CC /* UIComponents.swift */; };
 		16CA2B501F143A7F0085E220 /* MenuTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CA2B4F1F143A7F0085E220 /* MenuTabViewController.swift */; };
 		16CA2B521F143CC20085E220 /* NavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CA2B511F143CC20085E220 /* NavViewController.swift */; };
@@ -64,6 +66,8 @@
 		1690224C1F16D56D00B228BE /* CalendarEvents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarEvents.swift; sourceTree = "<group>"; };
 		16B91CB11F0B41E700D72043 /* CalendarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarItem.swift; sourceTree = "<group>"; };
 		16B91CB31F0B472500D72043 /* CalendarItemDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarItemDataSource.swift; sourceTree = "<group>"; };
+		16BCA1C31F1DB8A5003B59AC /* LoginResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		16BCA1C51F1DB8E3003B59AC /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		16BDDE801EFC69F2006AE0CC /* UIComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIComponents.swift; sourceTree = "<group>"; };
 		16CA2B4F1F143A7F0085E220 /* MenuTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTabViewController.swift; sourceTree = "<group>"; };
 		16CA2B511F143CC20085E220 /* NavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +151,8 @@
 				1619C4141F19559400CD987D /* CalendarsDataSource.swift */,
 				1619C4161F19560F00CD987D /* Calendar.swift */,
 				1619C4181F19690200CD987D /* CalendarsListCell.swift */,
+				16BCA1C31F1DB8A5003B59AC /* LoginResponse.swift */,
+				16BCA1C51F1DB8E3003B59AC /* User.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -525,7 +531,9 @@
 				1690224D1F16D56D00B228BE /* CalendarEvents.swift in Sources */,
 				165531061F046E500076CEBD /* CalendarsDetailViewController.swift in Sources */,
 				16CA2B521F143CC20085E220 /* NavViewController.swift in Sources */,
+				16BCA1C41F1DB8A5003B59AC /* LoginResponse.swift in Sources */,
 				16E41B9E1EE652F8001478EB /* ViewController.swift in Sources */,
+				16BCA1C61F1DB8E3003B59AC /* User.swift in Sources */,
 				16CA2B501F143A7F0085E220 /* MenuTabViewController.swift in Sources */,
 				16E41B9C1EE652F8001478EB /* AppDelegate.swift in Sources */,
 				16BDDE811EFC69F2006AE0CC /* UIComponents.swift in Sources */,

@@ -22,6 +22,7 @@ class CalendarListCell: DatasourceCell {
             nameInfo.text = calendars.name
             labelDate.text = dateformater.string(from:calendars.start_date)
             ndayLabel.text = "Cada \(calendars.n_days) dias"
+            calendarLabel.textColor = UIColors.greenStrong()
             //countryLabel.text = "\(branchOffice.countryName), \(branchOffice.city)"
             //courseImage.sd_setImage(with: URL(string: branchOffice.coverImageURL), placeholderImage: #imageLiteral(resourceName: "branch-image"))
             //flagImage.image = UIImage(named: branchOffice.countryFlag)
@@ -87,12 +88,22 @@ class CalendarListCell: DatasourceCell {
         return label
     }()
     
+    
+    let detailedView: UILabel = {
+        let label = UILabel()
+        label.font =  UIFont.icon(from: .Ionicon, ofSize: 17.0)
+        label.textColor = UIColors.dbColor()
+        label.text = String.fontIonIcon("ios-arrow-right")
+        return label
+
+    }()
     let lineView: UIView = {
        let uv = UIView()
-       uv.layer.borderWidth = CGFloat(0.25)
+       uv.layer.borderWidth = CGFloat(0.23)
        uv.layer.borderColor = UIColors.lineColor().cgColor
        return uv
     }()
+    
     override func setupViews() {
         super.setupViews()
         addSubview(calendarIconView)
@@ -142,6 +153,14 @@ class CalendarListCell: DatasourceCell {
             make.width.equalToSuperview().dividedBy(2)
             make.height.equalTo(40)
             make.left.equalToSuperview().offset(20)
+        }
+        infoView.addSubview(detailedView)
+        
+        detailedView.snp.makeConstraints{ (make) in
+            make.height.equalTo(40)
+            make.top.equalToSuperview().offset(40)
+            make.right.equalToSuperview().offset(20)
+            make.width.equalToSuperview().dividedBy(3)
         }
         
         infoView.addSubview(lineView)

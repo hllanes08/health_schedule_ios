@@ -21,6 +21,7 @@ target 'ios_baseline' do
   pod 'RAMAnimatedTabBarController', "~> 2.0.13" 
   pod 'FSCalendar'
   pod 'Segmentio', '~> 2.1'
+  pod 'MBProgressHUD', '~> 1.0.0'
   
   target 'ios_baselineTests' do
     inherit! :search_paths

@@ -11,6 +11,8 @@ import SkyFloatingLabelTextField
 import SwiftIconFont
 import ChameleonFramework
 import SnapKit
+import Spring
+import MBProgressHUD
 
 class LoginViewController: UIViewController {
 
@@ -18,15 +20,15 @@ class LoginViewController: UIViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-  
     
     let emailTextField: SkyFloatingLabelTextFieldWithIcon = {
-        let field = UIComponents.customTextField(placeholder: "email", icon: "io:person", tntColor: .flatWhite, phColor: UIColors.phColor(), bgColor: UIColors.textbgColor())
+        let field = UIComponents.customTextFieldRounded(placeholder: "email", icon: "io:person", tntColor: .flatWhite, phColor: UIColors.phColor(), bgColor: UIColors.textbgColor(), lineColor: UIColor.clear, selectedLineColor: UIColor.clear)
+        
         return field
     }()
     
     let passwordTextField: SkyFloatingLabelTextFieldWithIcon = {
-        let field = UIComponents.customTextField(placeholder: "contraseña", icon: "io:lock-combination", tntColor: .flatWhite, phColor: UIColors.phColor(), bgColor: UIColors.textbgColor())
+        let field = UIComponents.customTextFieldRounded(placeholder: "Contraseña", icon: "io:lock-combination", tntColor: .flatWhite, phColor: UIColors.phColor(), bgColor: UIColors.textbgColor(), lineColor: UIColor.clear, selectedLineColor: UIColor.clear)
         field.isSecureTextEntry = true
         return field
     }()
@@ -49,7 +51,8 @@ class LoginViewController: UIViewController {
         button.parseIcon()
         return button
     }()
-
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColors.bgColor()
@@ -73,7 +76,7 @@ class LoginViewController: UIViewController {
         passwordTextField.snp.makeConstraints { (make) in
             make.left.equalTo(self.view).offset(50)
             make.right.equalTo(self.view).offset(-50)
-            make.top.equalTo(emailTextField.snp.bottom)
+            make.top.equalTo(emailTextField.snp.bottom).offset(10)
             make.height.equalTo(50)
         }
         
@@ -83,6 +86,7 @@ class LoginViewController: UIViewController {
             make.top.equalTo(passwordTextField.snp.bottom).offset(20)
             make.height.equalTo(50)
         }
+        
         
         let tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
@@ -96,13 +100,31 @@ class LoginViewController: UIViewController {
     func login() {
         let email:String! = emailTextField.text
         let password:String! = passwordTextField.text
-        ApiService.sharedInstance.signIn(email: email, password: password)
-        self.dismiss(animated: true, completion: nil)
+        loadingAnimation()
+        ApiService.sharedInstance.signIn(email: email, password: password){ (loginResponse) in
+            if(loginResponse.success){
+                let vc = MenuTabViewController()
+                self.present(vc, animated: true, completion: nil)
+            }else{
+                 MBProgressHUD.hide(for: self.view, animated: true)
+                let alert = UIAlertController(title: "Login", message: loginResponse.errors, preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Aceptar", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
     }
     func dismissKeyboard() {
      view.endEditing(true)
     }
-  
+    
+    func loadingAnimation(){
+        DispatchQueue.global(qos: .default).async {
+            DispatchQueue.main.async {
+                MBProgressHUD.showAdded(to: self.view, animated: true)
+            }
+        }
+           
+    }
     /*
     // MARK: - Navigation
 

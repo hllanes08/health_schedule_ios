@@ -15,6 +15,9 @@ class CalendarsViewController: DatasourceController {
         super.viewDidLoad()
         fetchCalendars()
         collectionView?.backgroundColor =  UIColors.bgColor()//UIColor(gradientStyle:UIGradientStyle.radial, withFrame: self.view.frame, andColors:[ UIColors.bgCenterColor(), UIColors.bgColor(), UIColors.shadows()])
+        
+        let swipeDown: UIGestureRecognizer = UIGestureRecognizer(target: self, action: #selector(self.swipeDown(gesture:)))
+        view.addGestureRecognizer(swipeDown)
         // Do any additional setup after loading the view.
     }
 
@@ -32,8 +35,9 @@ class CalendarsViewController: DatasourceController {
         return CGSize(width: view.frame.width, height: 118)
     }
     
-
-    
+    func swipeDown(gesture : UISwipeGestureRecognizer){
+        
+    }
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc = CalendarsDetailViewController()
         let data = self.datasource as! CalendarsDataSource

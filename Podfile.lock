@@ -5,6 +5,7 @@ PODS:
     - ChameleonFramework/Default
   - FSCalendar (2.7.4)
   - LBTAComponents (0.1.9)
+  - MBProgressHUD (1.0.0)
   - RAMAnimatedTabBarController (2.0.13)
   - Segmentio (2.1.2)
   - SkyFloatingLabelTextField (3.0.0)
@@ -28,6 +29,7 @@ DEPENDENCIES:
   - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
   - FSCalendar
   - LBTAComponents
+  - MBProgressHUD (~> 1.0.0)
   - RAMAnimatedTabBarController (~> 2.0.13)
   - Segmentio (~> 2.1)
   - SkyFloatingLabelTextField (~> 3.0)
@@ -58,6 +60,7 @@ SPEC CHECKSUMS:
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   FSCalendar: e95995a746acae531c4a7dd636b8393233125ec5
   LBTAComponents: 9a5d314080d1f80208062ccc81a2d25225c5f572
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   RAMAnimatedTabBarController: 2510f3b66954c3f77ea1042a35d34df8f5f3b604
   Segmentio: f85114993e305bd9c522952eef8c2c4db732fd17
   SkyFloatingLabelTextField: 35bc0c2653ad73c5fd8b7a34cfedf09c94367a1a
@@ -68,6 +71,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   TRON: 7b9adeb678fe0e25433d207f6a734aaf145fa9b5
 
-PODFILE CHECKSUM: 17607de7e7efa1a5c0e38a7dc139ab397bcefd10
+PODFILE CHECKSUM: 274f780551536f81be6e212f89bfc4f7ff7662dc
 
 COCOAPODS: 1.2.1.beta.1
