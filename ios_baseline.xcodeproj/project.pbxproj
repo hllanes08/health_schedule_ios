@@ -18,6 +18,7 @@
 		16B91CB41F0B472500D72043 /* CalendarItemDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B91CB31F0B472500D72043 /* CalendarItemDataSource.swift */; };
 		16BCA1C41F1DB8A5003B59AC /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BCA1C31F1DB8A5003B59AC /* LoginResponse.swift */; };
 		16BCA1C61F1DB8E3003B59AC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BCA1C51F1DB8E3003B59AC /* User.swift */; };
+		16BCA1C81F1DD206003B59AC /* OnBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BCA1C71F1DD206003B59AC /* OnBoardViewController.swift */; };
 		16BDDE811EFC69F2006AE0CC /* UIComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BDDE801EFC69F2006AE0CC /* UIComponents.swift */; };
 		16CA2B501F143A7F0085E220 /* MenuTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CA2B4F1F143A7F0085E220 /* MenuTabViewController.swift */; };
 		16CA2B521F143CC20085E220 /* NavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CA2B511F143CC20085E220 /* NavViewController.swift */; };
@@ -68,6 +69,7 @@
 		16B91CB31F0B472500D72043 /* CalendarItemDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarItemDataSource.swift; sourceTree = "<group>"; };
 		16BCA1C31F1DB8A5003B59AC /* LoginResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		16BCA1C51F1DB8E3003B59AC /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		16BCA1C71F1DD206003B59AC /* OnBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardViewController.swift; sourceTree = "<group>"; };
 		16BDDE801EFC69F2006AE0CC /* UIComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIComponents.swift; sourceTree = "<group>"; };
 		16CA2B4F1F143A7F0085E220 /* MenuTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTabViewController.swift; sourceTree = "<group>"; };
 		16CA2B511F143CC20085E220 /* NavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				16CA2B511F143CC20085E220 /* NavViewController.swift */,
 				16CA2B551F143FE90085E220 /* CalendarViewController.swift */,
 				1619C4121F19537D00CD987D /* CalendarsViewController.swift */,
+				16BCA1C71F1DD206003B59AC /* OnBoardViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -538,6 +541,7 @@
 				16E41B9C1EE652F8001478EB /* AppDelegate.swift in Sources */,
 				16BDDE811EFC69F2006AE0CC /* UIComponents.swift in Sources */,
 				16CA2B561F143FE90085E220 /* CalendarViewController.swift in Sources */,
+				16BCA1C81F1DD206003B59AC /* OnBoardViewController.swift in Sources */,
 				16E41BCA1EE65510001478EB /* ApiService.swift in Sources */,
 				1619C4151F19559400CD987D /* CalendarsDataSource.swift in Sources */,
 				16B91CB41F0B472500D72043 /* CalendarItemDataSource.swift in Sources */,

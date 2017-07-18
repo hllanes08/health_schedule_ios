@@ -13,6 +13,7 @@ import EventKit
 import Spring
 import ChameleonFramework
 import Segmentio
+import MBProgressHUD
 
 class CalendarsDetailViewController: UIViewController  {
     var datasource:Datasource = {
@@ -250,6 +251,9 @@ class CalendarsDetailViewController: UIViewController  {
             make.height.equalToSuperview().dividedBy(4)
             make.width.equalToSuperview().dividedBy(2)
         }
+        
+        loadingAnimation()
+        
         ApiService.sharedInstance.fetchCalendarItems(calendarId: self.calendarId){ (calendarItemsDataSource) in
             self.datasource = calendarItemsDataSource
             self.weekendLabels.text = String(calendarItemsDataSource.numberOfWeekends())
@@ -257,9 +261,9 @@ class CalendarsDetailViewController: UIViewController  {
             self.holidayLabel.text = String(calendarItemsDataSource.numberOfHolidays())
             var appDelegate = UIApplication.shared.delegate as! AppDelegate
             appDelegate.calendarEvents.events = calendarItemsDataSource.calendar_items
-            self.animationStatus = true
+            MBProgressHUD.hide(for: self.view, animated: true)
         }
-        addAnimation()
+        
 
     }
 
@@ -270,7 +274,6 @@ class CalendarsDetailViewController: UIViewController  {
     }
     
     func addEventsToCalendar(){
-        self.addAnimation()
         eventStore.requestAccess(to: EKEntityType.event, completion: { (granted, error) in
              if (granted) && (error == nil) {
                 let events_calendar = self.addCalendar()
@@ -310,23 +313,17 @@ class CalendarsDetailViewController: UIViewController  {
         catch { }
         return turnosCalendar
     }
-    func addAnimation(){
-      DispatchQueue.global(qos: .background).async {
-        DispatchQueue.main.async {
-                self.animationView.alpha = 1
-                self.animationView.animation = "flipY"
-                self.animationView.repeatCount = Float(100)
-                self.animationView.animate()
-                self.animationView.animateNext {
-                    self.animationView.animation = "flipX"
-                    self.animationView.repeatCount = Float(100)
-                    self.animationView.animate()
-                    self.animationView.alpha = 0
-                }
-        }
-      }
+
     
+    func loadingAnimation(){
+        DispatchQueue.global(qos: .default).async {
+            DispatchQueue.main.async {
+                MBProgressHUD.showAdded(to: self.view, animated: true)
+            }
+        }
+        
     }
+
     
     /*
     // MARK: - Navigation
