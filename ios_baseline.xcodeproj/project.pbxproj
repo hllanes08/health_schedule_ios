@@ -11,6 +11,7 @@
 		1619C4151F19559400CD987D /* CalendarsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1619C4141F19559400CD987D /* CalendarsDataSource.swift */; };
 		1619C4171F19560F00CD987D /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1619C4161F19560F00CD987D /* Calendar.swift */; };
 		1619C4191F19690200CD987D /* CalendarsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1619C4181F19690200CD987D /* CalendarsListCell.swift */; };
+		161ECE3F1F1E873B00660128 /* AddCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161ECE3E1F1E873B00660128 /* AddCalendarViewController.swift */; };
 		163FAD351EE7C7BB00486FDA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163FAD341EE7C7BB00486FDA /* LoginViewController.swift */; };
 		165531061F046E500076CEBD /* CalendarsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165531051F046E500076CEBD /* CalendarsDetailViewController.swift */; };
 		1690224D1F16D56D00B228BE /* CalendarEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690224C1F16D56D00B228BE /* CalendarEvents.swift */; };
@@ -61,6 +62,7 @@
 		1619C4141F19559400CD987D /* CalendarsDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarsDataSource.swift; sourceTree = "<group>"; };
 		1619C4161F19560F00CD987D /* Calendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
 		1619C4181F19690200CD987D /* CalendarsListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarsListCell.swift; sourceTree = "<group>"; };
+		161ECE3E1F1E873B00660128 /* AddCalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCalendarViewController.swift; sourceTree = "<group>"; };
 		162EFCCA1B3A72FF93ECF8A0 /* Pods-ios_baselineTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_baselineTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios_baselineTests/Pods-ios_baselineTests.release.xcconfig"; sourceTree = "<group>"; };
 		163FAD341EE7C7BB00486FDA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		165531051F046E500076CEBD /* CalendarsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarsDetailViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				16CA2B551F143FE90085E220 /* CalendarViewController.swift */,
 				1619C4121F19537D00CD987D /* CalendarsViewController.swift */,
 				16BCA1C71F1DD206003B59AC /* OnBoardViewController.swift */,
+				161ECE3E1F1E873B00660128 /* AddCalendarViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -528,6 +531,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				161ECE3F1F1E873B00660128 /* AddCalendarViewController.swift in Sources */,
 				16CA2B541F143D920085E220 /* LogoBarButtonItem.swift in Sources */,
 				163FAD351EE7C7BB00486FDA /* LoginViewController.swift in Sources */,
 				1619C4131F19537D00CD987D /* CalendarsViewController.swift in Sources */,

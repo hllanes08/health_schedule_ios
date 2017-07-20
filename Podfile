@@ -23,6 +23,8 @@ target 'ios_baseline' do
   pod 'Segmentio', '~> 2.1'
   pod 'MBProgressHUD', '~> 1.0.0'
   pod 'paper-onboarding', '~> 2.0.1'
+  pod 'DatePickerDialog'
+  pod 'DropDown'
   
   target 'ios_baselineTests' do
     inherit! :search_paths

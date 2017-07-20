@@ -83,12 +83,52 @@ struct ApiService {
         if(token != nil){
             self.tron.headerBuilder = HeaderBuilder(defaultHeaders: ["Authorization": token!])
         }
+        
         let request: APIRequest<CalendarsDataSource, JSONError> = tron.request("/calendar")
         request.perform(withSuccess: { (calendarsDataSource) in
             completion(calendarsDataSource)
         }) { (err) in
             print("failed to fetch json...", err)
         }
+    }
+    
+    func addCalendar(name: String, startDate: String, endDate:String, ndays:String,completion: @escaping (Bool) -> ())  {
+        let parameters: [String : Any] = [
+                "start_date": startDate,
+                "name": name,
+                "ndays": ndays
+        ]
+        
+        let token  = KeychainWrapper.standard.string(forKey: "token")
+        if(token != nil){
+            self.tron.headerBuilder = HeaderBuilder(defaultHeaders: ["Authorization": token!])
+        }
+        let request: APIRequest<String, JSONError> = tron.request("/calendar")
+        request.method = .post
+        request.parameters = parameters
+        request.perform(withSuccess: { (response) in
+            print(response)
+            completion(true)
+        }) { (err) in
+            print("failed to fetch json...", err)
+            completion(false)
+        }
+    }
+    
+    func deleteCalendar(calendarId:Int, completion: @escaping (Bool) -> ())  {
+        let token  = KeychainWrapper.standard.string(forKey: "token")
+        if(token != nil){
+            self.tron.headerBuilder = HeaderBuilder(defaultHeaders: ["Authorization": token!])
+        }
+        let request: APIRequest<JSON, JSONError> = tron.request("/calendar/\(calendarId)")
+        request.method = .delete
+        request.perform(withSuccess: { (calendar) in
+            completion(true)
+        }) { (err) in
+            print("failed to fetch json...", err)
+            completion(false)
+        }
+
     }
     
     

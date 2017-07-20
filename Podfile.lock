@@ -3,6 +3,8 @@ PODS:
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
+  - DatePickerDialog (1.1.7)
+  - DropDown (2)
   - FSCalendar (2.7.4)
   - LBTAComponents (0.1.9)
   - MBProgressHUD (1.0.0)
@@ -28,6 +30,8 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 4.4)
   - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
+  - DatePickerDialog
+  - DropDown
   - FSCalendar
   - LBTAComponents
   - MBProgressHUD (~> 1.0.0)
@@ -60,6 +64,8 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  DatePickerDialog: bd5e7e92e4da2c6a8966b28d5f5d8f335d6c2c63
+  DropDown: 744784d9c9aa505100e942c16acd05430cbb2f0a
   FSCalendar: e95995a746acae531c4a7dd636b8393233125ec5
   LBTAComponents: 9a5d314080d1f80208062ccc81a2d25225c5f572
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
@@ -74,6 +80,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   TRON: 7b9adeb678fe0e25433d207f6a734aaf145fa9b5
 
-PODFILE CHECKSUM: 2066eb65284ff45a979cc8b750af4a12303c397b
+PODFILE CHECKSUM: 775a96c4b819498814ba09d6fc779736d0c7b7b6
 
 COCOAPODS: 1.2.1.beta.1

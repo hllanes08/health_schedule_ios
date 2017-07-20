@@ -51,7 +51,7 @@ class CalendarsViewController: DatasourceController {
     }
    
     func addCalendar(sender: UIBarButtonItem){
-        let vc = OnBoardViewController()
+        let vc = AddCalendarViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
     /*

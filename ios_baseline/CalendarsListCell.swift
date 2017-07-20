@@ -104,6 +104,7 @@ class CalendarListCell: DatasourceCell {
        return uv
     }()
     
+   
     override func setupViews() {
         super.setupViews()
         addSubview(calendarIconView)
@@ -170,6 +171,8 @@ class CalendarListCell: DatasourceCell {
             make.right.left.equalToSuperview()
             make.bottom.equalToSuperview()
         }
+        
     }
-
+    
+    
 }

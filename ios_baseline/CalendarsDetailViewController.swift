@@ -264,6 +264,16 @@ class CalendarsDetailViewController: UIViewController  {
             MBProgressHUD.hide(for: self.view, animated: true)
         }
         
+        let rightButtonItem = UIBarButtonItem(
+            title: String.fontIonIcon("ios-trash-outline"),
+            style: .done,
+            target: self,
+            action: #selector(destroyCalendar)
+        )
+        rightButtonItem.setTitleTextAttributes([NSFontAttributeName: UIFont.icon(from: .Ionicon, ofSize: 21.0)], for: .normal)
+        self.navigationItem.rightBarButtonItem = rightButtonItem
+        
+
 
     }
 
@@ -324,7 +334,17 @@ class CalendarsDetailViewController: UIViewController  {
         
     }
 
-    
+    func destroyCalendar(){
+        let alert = UIAlertController(title: "Borrar", message: "Estas Seguro?", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Aceptar", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated:true)
+        loadingAnimation()
+        ApiService.sharedInstance.deleteCalendar(calendarId: self.calendarId) { (bool) in
+            MBProgressHUD.hide(for: self.view, animated: true)
+            self.navigationController?.popViewController(animated: true)
+        }
+    }
+
     /*
     // MARK: - Navigation
 

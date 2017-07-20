@@ -10,10 +10,18 @@ import UIKit
 import paper_onboarding
 
 class OnBoardViewController: UIViewController {
+    
+    let startDateView:UIView = {
+        let uv = UIView()
+        uv.backgroundColor = .clear
+        uv.layer.masksToBounds = true
+        return uv
 
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let onboarding = PaperOnboarding(itemsCount: 3)
+        let onboarding = PaperOnboarding(itemsCount: 1)
         onboarding.dataSource = self
         onboarding.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(onboarding)
@@ -55,19 +63,22 @@ extension OnBoardViewController: PaperOnboardingDataSource {
     func onboardingItemAtIndex(_ index: Int) -> OnboardingItemInfo {
         let titleFont = UIFont(name: "Nunito-Bold", size: 36.0) ?? UIFont.boldSystemFont(ofSize: 36.0)
         let descriptionFont = UIFont(name: "OpenSans-Regular", size: 14.0) ?? UIFont.systemFont(ofSize: 14.0)
-        return [
-            ("BIG_IMAGE1", "Title", "Description text", "IconName1",  UIColor(red:0.61, green:0.56, blue:0.74, alpha:1.00), UIColor.white, UIColor.white, titleFont, descriptionFont),
-             ("BIG_IMAGE1", "Title", "Description text", "IconName1",  UIColor(red:0.61, green:0.56, blue:0.74, alpha:1.00), UIColor.white, UIColor.white, titleFont, descriptionFont),
-              ("BIG_IMAGE1", "Title", "Description text", "IconName1",  UIColor(red:0.61, green:0.56, blue:0.74, alpha:1.00), UIColor.white, UIColor.white, titleFont, descriptionFont)
-            ][index]
+
+        return [("","Agregar Fechas","Agregar Todas fecha inicial y final","IconName", UIColors.bgAppColor(), UIColor.white, UIColor.white,titleFont, descriptionFont)
+        ][index]
     }
-    
+        
     func onboardingItemsCount() -> Int {
-        return 3
+        return 1
     }
     
     func onboardingConfigurationItem(item: OnboardingContentViewItem, index: Int) {
-            
+        item.titleLabel?.tintColor = UIColor.red
+        /*startDateView.backgroundColor = UIColor.red
+        startDateView.snp.makeConstraints{ (make) in
+            make.centerY.centerX.equalToSuperview()
+            make.width.height.equalToSuperview()
+        }*/
     }
     
 }

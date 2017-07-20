@@ -30,7 +30,7 @@ class UIComponents{
     
     static func customTextFieldRounded(placeholder:String, icon: String, tntColor: UIColor, phColor: UIColor, bgColor:UIColor, lineColor: UIColor, selectedLineColor: UIColor) -> SkyFloatingLabelTextFieldWithIcon  {
         let field = customTextField(placeholder: placeholder,icon: icon, tntColor: tntColor, phColor: phColor, bgColor:bgColor, lineColor: lineColor, selectedLineColor: selectedLineColor)
-        field.layer.cornerRadius = 15.0
+        field.layer.cornerRadius = 7.0
         return field
     }
     static func customTextFieldCorners(placeholder:String, icon: String, tntColor: UIColor, phColor: UIColor, bgColor:UIColor, corners: UIRectCorner, lineColor: UIColor, selectedLineColor: UIColor) ->SkyFloatingLabelTextFieldWithIcon  {

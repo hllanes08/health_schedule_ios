@@ -28,7 +28,7 @@ class LoginViewController: UIViewController {
     }()
     
     let passwordTextField: SkyFloatingLabelTextFieldWithIcon = {
-        let field = UIComponents.customTextFieldRounded(placeholder: "Contraseña", icon: "io:lock-combination", tntColor: .flatWhite, phColor: UIColors.phColor(), bgColor: UIColors.textbgColor(), lineColor: UIColor.clear, selectedLineColor: UIColor.clear)
+        let field = UIComponents.customTextFieldRounded(placeholder: "Contraseña", icon: "io:unlocked", tntColor: .flatWhite, phColor: UIColors.phColor(), bgColor: UIColors.textbgColor(), lineColor: UIColor.clear, selectedLineColor: UIColor.clear)
         field.isSecureTextEntry = true
         return field
     }()
