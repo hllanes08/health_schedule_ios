@@ -7,6 +7,7 @@ Create custom calendars
 ![alt text](https://raw.githubusercontent.com/hllanes08/health_schedule_ios/health_schedule_dev/Captures/IMG_1784.PNG)
 
 See number of holidays and weekends affected by events
+
 ![alt text](https://raw.githubusercontent.com/hllanes08/health_schedule_ios/health_schedule_dev/Captures/IMG_1781.PNG)
 
 Add more that one calendar
