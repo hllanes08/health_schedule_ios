@@ -8,13 +8,22 @@
 
 import LBTAComponents
 import ChameleonFramework
+import MBProgressHUD
 
 class CalendarsViewController: DatasourceController {
 
+    let refreshControl:UIRefreshControl = {
+        let rc = UIRefreshControl()
+        rc.addTarget(self, action: #selector(fetchCalendars), for: UIControlEvents.allEvents)
+        return rc
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadingAnimation()
         fetchCalendars()
         collectionView?.backgroundColor =  UIColors.bgColor()//UIColor(gradientStyle:UIGradientStyle.radial, withFrame: self.view.frame, andColors:[ UIColors.bgCenterColor(), UIColors.bgColor(), UIColors.shadows()])
+        collectionView?.addSubview(refreshControl)
         let rightButtonItem = UIBarButtonItem(
             title: String.fontIonIcon("ios-plus-outline"),
             style: .done,
@@ -36,6 +45,8 @@ class CalendarsViewController: DatasourceController {
     func fetchCalendars(){
         ApiService.sharedInstance.fetchCalendars(completion: { (calendarsDataSource) in
             self.datasource = calendarsDataSource
+            MBProgressHUD.hide(for: self.view, animated: true)
+            self.refreshControl.endRefreshing()
         })
     }
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -53,6 +64,15 @@ class CalendarsViewController: DatasourceController {
     func addCalendar(sender: UIBarButtonItem){
         let vc = AddCalendarViewController()
         navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func loadingAnimation(){
+        DispatchQueue.global(qos: .default).async {
+            DispatchQueue.main.async {
+                MBProgressHUD.showAdded(to: self.view, animated: true)
+            }
+        }
+       
     }
     /*
     // MARK: - Navigation

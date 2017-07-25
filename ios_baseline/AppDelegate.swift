@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().tintColor = .white
         UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.white], for: .normal)
         
-        self.window?.rootViewController = MenuTabViewController()//LoginViewController()
+        self.window?.rootViewController = LoginViewController()
         if calendarEvents == nil  {
           let appDelegate = UIApplication.shared.delegate as! AppDelegate
           appDelegate.calendarEvents = CalendarEvents()
